@@ -1,4 +1,4 @@
-// app/page.tsx (Laman Utama/Beranda)
+// app/page.tsx
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -9,12 +9,9 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 overflow-x-hidden scroll-smooth">
       <Navbar />
 
-      {/* Hero Section */}
       <section className="relative pt-20 flex items-center min-h-[90vh]">
         <div className="absolute inset-0 z-0 bg-slate-900 overflow-hidden">
-           <div className="absolute inset-0 opacity-20" 
-                style={{ backgroundImage: 'radial-gradient(#f59e0b 2px, transparent 2px)', backgroundSize: '40px 40px' }}>
-           </div>
+           <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#f59e0b 2px, transparent 2px)', backgroundSize: '40px 40px' }}></div>
            <div className="absolute inset-0 bg-gradient-to-tr from-slate-900 via-slate-900/95 to-slate-800/80"></div>
         </div>
         
@@ -45,7 +42,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 mb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
           {[
@@ -54,9 +50,7 @@ export default function Home() {
             { icon: <HardHat size={32} />, title: "100% Lokal", desc: "Pekerja Ahli Sarawak" }
           ].map((stat, i) => (
             <div key={i} className="bg-white rounded-2xl shadow-xl p-6 border border-slate-100 hover:-translate-y-2 transition-all duration-300 flex items-center gap-5">
-              <div className="w-16 h-16 bg-amber-50 rounded-xl flex items-center justify-center text-amber-500 shrink-0">
-                {stat.icon}
-              </div>
+              <div className="w-16 h-16 bg-amber-50 rounded-xl flex items-center justify-center text-amber-500 shrink-0">{stat.icon}</div>
               <div>
                 <h3 className="font-extrabold text-2xl text-slate-800">{stat.title}</h3>
                 <p className="text-slate-500 font-medium">{stat.desc}</p>
@@ -66,7 +60,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ringkasan Tentang Kami */}
       <section className="py-24 bg-slate-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
@@ -86,7 +79,6 @@ export default function Home() {
               <p className="text-slate-600 mb-6 text-lg leading-relaxed">
                 Prado Enterprise bukan sekadar kontraktor biasa. Kami berkomitmen mewujudkan rumah idaman Anda dengan standar keamanan dan kualitas tertinggi.
               </p>
-              
               <Link href="/tentang-kami" className="inline-flex items-center gap-2 border-2 border-slate-900 text-slate-900 font-bold px-8 py-3.5 rounded-lg hover:bg-slate-900 hover:text-white transition-all mt-6">
                 Pelajari Sejarah Kami <ChevronRight size={20} />
               </Link>
@@ -95,7 +87,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ringkasan Layanan */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 gap-6">

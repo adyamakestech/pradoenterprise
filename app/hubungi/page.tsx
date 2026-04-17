@@ -75,16 +75,8 @@ export default function HubungiKami() {
                     <p className="text-lg font-medium leading-relaxed text-slate-200">
                       Lantai Dasar, Lot 940, Blok 31,<br />
                       Kemena Land District, Jalan Tanjung Batu,<br />
-                      97000 Bintulu, Sarawak
+                      97000 Bintulu, Sarawak 
                     </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0"><Clock className="text-amber-500" /></div>
-                  <div>
-                    <h3 className="font-semibold text-slate-300 text-sm mb-1">Jam Operasional</h3>
-                    <p className="text-lg font-medium text-slate-200">Senin - Sabtu</p>
-                    <p className="text-slate-400 text-sm">08:00 Pagi - 17:00 Sore</p>
                   </div>
                 </div>
               </div>
@@ -93,38 +85,35 @@ export default function HubungiKami() {
             <div className="w-full lg:w-3/5 p-10 sm:p-12">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Kirim Pesan kepada Kami</h2>
               {isSuccess && (
-                <div className="mb-8 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
+                <div className="mb-8 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl flex items-center gap-3">
                   <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center shrink-0"><Send size={16} /></div>
-                  <p className="font-medium">Terima kasih! Pesan Anda telah berhasil dikirim. Tim kami akan segera menghubungi Anda.</p>
+                  <p className="font-medium">Terima kasih! Pesan Anda telah berhasil dikirim.</p>
                 </div>
               )}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="nama" className="block text-sm font-semibold text-slate-700 mb-2">Nama Lengkap</label>
-                    <input type="text" id="nama" required className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-amber-500 outline-none transition-all" placeholder="Masukkan nama Anda" />
+                    <label className="block text-sm font-semibold text-slate-700 mb-2">Nama Lengkap</label>
+                    <input type="text" required className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-amber-500 outline-none" placeholder="Masukkan nama Anda" />
                   </div>
                   <div>
-                    <label htmlFor="telefon" className="block text-sm font-semibold text-slate-700 mb-2">Nomor Telepon</label>
-                    <input type="tel" id="telefon" required className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-amber-500 outline-none transition-all" placeholder="+60 1x-xxx xxxx" />
+                    <label className="block text-sm font-semibold text-slate-700 mb-2">Nomor Telepon</label>
+                    <input type="tel" required className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-amber-500 outline-none" placeholder="+60 1x-xxx xxxx" />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="perkhidmatan" className="block text-sm font-semibold text-slate-700 mb-2">Layanan yang Dibutuhkan</label>
-                  <select id="perkhidmatan" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-amber-500 outline-none transition-all appearance-none">
+                  <label className="block text-sm font-semibold text-slate-700 mb-2">Layanan yang Dibutuhkan</label>
+                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-amber-500 outline-none appearance-none">
                     <option value="" disabled selected>Silakan pilih layanan...</option>
                     <option value="bina-baru">Pembangunan Rumah Baru</option>
                     <option value="ubah-suai">Renovasi</option>
-                    <option value="reka-bentuk">Desain Interior / 3D</option>
-                    <option value="komersial">Proyek Komersial</option>
-                    <option value="lain-lain">Lain-lain</option>
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="mesej" className="block text-sm font-semibold text-slate-700 mb-2">Pesan / Detail Proyek</label>
-                  <textarea id="mesej" rows={4} required className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-amber-500 outline-none transition-all resize-none" placeholder="Ceritakan sedikit tentang anggaran, ukuran tanah, atau visi proyek Anda..."></textarea>
+                  <label className="block text-sm font-semibold text-slate-700 mb-2">Pesan / Detail Proyek</label>
+                  <textarea rows={4} required className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-amber-500 outline-none resize-none" placeholder="Ceritakan detail proyek Anda..."></textarea>
                 </div>
-                <button type="submit" disabled={isSubmitting} className={`w-full text-slate-900 font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-lg shadow-amber-500/20 ${isSubmitting ? 'bg-amber-300 cursor-not-allowed' : 'bg-amber-500 hover:bg-amber-400 hover:-translate-y-1'}`}>
+                <button type="submit" disabled={isSubmitting} className={`w-full text-slate-900 font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 ${isSubmitting ? 'bg-amber-300' : 'bg-amber-500 hover:bg-amber-400'}`}>
                   {isSubmitting ? 'Mengirim...' : (<>Kirim Pesan <Send size={20} /></>)}
                 </button>
               </form>

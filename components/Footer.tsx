@@ -8,9 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
            <div className="flex items-center gap-2 mb-6">
-            <div className="w-8 h-8 bg-amber-500 text-white rounded-md flex items-center justify-center font-bold text-lg">
-              P
-            </div>
+            <div className="w-8 h-8 bg-amber-500 text-white rounded-md flex items-center justify-center font-bold text-lg">P</div>
             <span className="font-bold text-xl text-white">
               Prado <span className="text-amber-500">Enterprise</span>
             </span>
