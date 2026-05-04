@@ -2,8 +2,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
-import { Target, Shield, Users, Award, HardHat } from 'lucide-react';
+import { Target, Shield, Users, CheckCircle } from 'lucide-react';
 
 export default function TentangKami() {
   const nilaiTeras = [
@@ -28,11 +27,14 @@ export default function TentangKami() {
     <div className="min-h-screen bg-slate-50">
       <Navbar />
 
+      {/* Header Tentang Kami */}
       <section className="pt-32 pb-20 bg-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#f59e0b 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 text-amber-400 font-semibold text-sm mb-6 border border-amber-500/20">
-            <Award size={16} /> Kontraktor Terdaftar CIDB
+            <CheckCircle size={16} /> Kontraktor Terdaftar Resmi
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Tentang Prado Enterprise</h1>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
@@ -41,34 +43,27 @@ export default function TentangKami() {
         </div>
       </section>
 
+      {/* Kisah Kami (Tanpa Gambar Kiri, Layout Dibuat Ke Tengah) */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="w-full lg:w-1/2 relative">
-              <div className="aspect-[4/5] bg-slate-100 rounded-3xl overflow-hidden relative shadow-xl flex items-center justify-center text-slate-400">
-                <div className="text-center p-8">
-                  <HardHat size={80} className="mx-auto mb-4 opacity-30" />
-                  <p className="font-medium text-lg">[Gambar Pendiri / Tim Prado]</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="w-full lg:w-1/2">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
-                Putra Daerah Bintulu,<br />Pakar Konstruksi Anda.
-              </h2>
-              <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
-                <p>Prado Enterprise bermula dengan satu tujuan sederhana: menyediakan layanan konstruksi dan renovasi berkualitas tinggi yang transparan dan dapat diandalkan oleh penduduk Bintulu dan sekitarnya.</p>
-                <p>Menyadari tantangan yang sering dihadapi oleh pemilik rumah—seperti proyek mangkrak, biaya tersembunyi, dan bahan berkualitas rendah—kami mendirikan perusahaan ini untuk membawa standar profesionalisme baru ke dalam industri konstruksi lokal.</p>
-                <p className="font-semibold text-slate-800 border-l-4 border-amber-500 pl-4 py-2 bg-amber-50 rounded-r-lg">
-                  "Rumah Anda adalah investasi seumur hidup. Tanggung jawab kami adalah memastikan fondasinya kokoh dan desainnya mewujudkan impian Anda."
-                </p>
-              </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-8 leading-tight">
+            Putra Daerah Bintulu,<br />Pakar Konstruksi Anda.
+          </h2>
+          <div className="space-y-6 text-lg text-slate-600 leading-relaxed text-left md:text-center">
+            <p>
+              Prado Enterprise bermula dengan satu tujuan sederhana: menyediakan layanan konstruksi dan renovasi berkualitas tinggi yang transparan dan dapat diandalkan oleh penduduk Bintulu dan sekitarnya.
+            </p>
+            <p>
+              Menyadari tantangan yang sering dihadapi oleh pemilik rumah—seperti proyek mangkrak, biaya tersembunyi, dan bahan berkualitas rendah—kami mendirikan perusahaan ini untuk membawa standar profesionalisme baru ke dalam industri konstruksi lokal.
+            </p>
+            <div className="font-semibold text-slate-800 border-l-4 md:border-l-0 md:border-t-4 border-amber-500 p-6 bg-amber-50 rounded-lg mt-8 inline-block text-left">
+              "Rumah Anda adalah investasi seumur hidup. Tanggung jawab kami adalah memastikan fondasinya kokoh dan desainnya mewujudkan impian Anda."
             </div>
           </div>
         </div>
       </section>
 
+      {/* Visi, Misi & Nilai */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -86,15 +81,11 @@ export default function TentangKami() {
         </div>
       </section>
 
+      {/* Sertifikasi (Hanya SSM) */}
       <section className="py-16 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-xl font-bold text-slate-400 uppercase tracking-widest mb-8">Terdaftar & Diakui Secara Resmi Oleh</h3>
-          <div className="flex flex-wrap justify-center items-center gap-12 sm:gap-24 opacity-80">
-            <div className="flex flex-col items-center gap-2">
-              <div className="flex items-center gap-3 font-bold text-2xl text-slate-800">
-                <Award className="w-10 h-10 text-slate-800" /> CIDB MALAYSIA
-              </div>
-            </div>
+          <div className="flex flex-wrap justify-center items-center opacity-80">
             <div className="flex flex-col items-center gap-2">
               <div className="flex items-center gap-3 font-bold text-2xl text-slate-800">
                 <Shield className="w-10 h-10 text-slate-800" /> SSM TERDAFTAR
