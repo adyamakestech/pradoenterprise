@@ -21,7 +21,7 @@ export default function PortofolioProyek() {
       status: "Selesai", 
       year: "2023", 
       desc: "Pembangunan rumah bungalo eksklusif.",
-      image: "/img/proyek-1.jpg" // <-- Ganti dengan nama file foto Anda
+      image: "/img/proyek1.jpeg" // <-- Ganti dengan nama file foto Anda
     },
     { 
       id: 2, 
